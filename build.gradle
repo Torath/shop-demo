@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+	compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.21'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.2.1.RELEASE', ext: 'pom'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compile group: 'org.apache.tomcat', name: 'tomcat-jsp-api', version: '9.0.21'
+	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+
+}
